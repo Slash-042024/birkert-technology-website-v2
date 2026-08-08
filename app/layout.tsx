@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { SiteShell } from "@/components/layout/site-shell";
 import "./globals.css";
@@ -19,7 +20,11 @@ export const metadata: Metadata = {
     "Birkert Technology designs modern products and web experiences with practical engineering.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang="en"
