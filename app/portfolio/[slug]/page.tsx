@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { createMetadata } from "@/data/seo";
 import {
   getPortfolioProjectBySlug,
   portfolioCtaSection,
@@ -16,6 +18,25 @@ type PortfolioProjectPageProps = {
 
 export function generateStaticParams() {
   return portfolioProjects.map((project) => ({ slug: project.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: PortfolioProjectPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getPortfolioProjectBySlug(slug);
+
+  if (!project) {
+    notFound();
+  }
+
+  return createMetadata({
+    title: `${project.label} Case Study`,
+    description: project.description,
+    path: project.href,
+    keywords: [project.label, "portfolio case study", "client website project"],
+    type: "article",
+  });
 }
 
 export default async function PortfolioProjectPage({

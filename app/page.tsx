@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Hero } from "@/components/ui/hero";
 import { ProductCard } from "@/components/ui/product-card";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { createMetadata } from "@/data/seo";
 import {
   homeHero,
   homeProductsSection,
@@ -10,6 +12,13 @@ import {
   homeServicesSection,
 } from "@/data/home";
 import { products } from "@/data/site";
+
+export const metadata: Metadata = createMetadata({
+  title: "Custom Software and Web Engineering",
+  description: homeHero.description,
+  path: "/",
+  keywords: ["software engineering", "custom websites", "digital products"],
+});
 
 export default function Home() {
   return (

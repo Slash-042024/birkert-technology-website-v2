@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Hero } from "@/components/ui/hero";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { createMetadata } from "@/data/seo";
 import {
   processSteps,
   serviceItems,
@@ -10,6 +12,13 @@ import {
   servicesOfferingsSection,
   servicesProcessSection,
 } from "@/data/services";
+
+export const metadata: Metadata = createMetadata({
+  title: "Services",
+  description: servicesHero.description,
+  path: "/services",
+  keywords: ["custom software services", "website engineering services"],
+});
 
 export default function ServicesPage() {
   return (

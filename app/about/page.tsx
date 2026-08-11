@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Hero } from "@/components/ui/hero";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { createMetadata } from "@/data/seo";
 import {
   aboutCtaSection,
   aboutHero,
@@ -11,6 +13,13 @@ import {
   principles,
   storyMilestones,
 } from "@/data/about";
+
+export const metadata: Metadata = createMetadata({
+  title: "About",
+  description: aboutHero.description,
+  path: "/about",
+  keywords: ["about Birkert Technology", "engineering approach"],
+});
 
 export default function AboutPage() {
   return (

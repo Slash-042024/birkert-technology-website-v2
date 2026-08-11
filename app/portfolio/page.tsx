@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Hero } from "@/components/ui/hero";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { createMetadata } from "@/data/seo";
 import {
   portfolioProjects,
   portfolioCtaSection,
@@ -9,6 +11,13 @@ import {
   portfolioProjectsSection,
   portfolioTestimonialsSection,
 } from "@/data/portfolio";
+
+export const metadata: Metadata = createMetadata({
+  title: "Portfolio",
+  description: portfolioHero.description,
+  path: "/portfolio",
+  keywords: ["software portfolio", "website case studies"],
+});
 
 export default function PortfolioPage() {
   return (

@@ -25,10 +25,13 @@ export const homeHero = {
   ] as Cta[],
   snapshotLabel: "Foundation Snapshot",
   snapshotItems: [
-    { label: "Current products", value: "2" },
     {
-      label: "Frontend architecture",
-      value: "Next.js App Router + reusable components",
+      label: "Backend architecture",
+      value: "FastAPI + Python + PostgreSQL + AWS",
+    },
+    {
+      label: "Frontend framework",
+      value: "Next.js App Router + React Server Components",
     },
     { label: "Design direction", value: " clean, and product-focused" },
   ] as SnapshotItem[],
@@ -63,5 +66,5 @@ export const homeProductsSection = {
   eyebrow: "Products",
   title: "Current Product Portfolio",
   description:
-    "TowControl and HomeBalance are currently in research and development. We are taking the time to design, build, and test each product carefully before release. Explore their early-stage features to see the problems we're working to solve and where these products are headed.",
+    "TowControl and HomeBalance are currently in research and development. We are designing and validating each product carefully before release so the foundation is practical, stable, and useful.",
 };

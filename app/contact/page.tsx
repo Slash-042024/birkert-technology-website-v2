@@ -1,12 +1,21 @@
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Hero } from "@/components/ui/hero";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { createMetadata } from "@/data/seo";
 import {
   contactHero,
   contactProcessSection,
   contactCtaSection,
 } from "@/data/contact";
+
+export const metadata: Metadata = createMetadata({
+  title: "Contact",
+  description: contactHero.description,
+  path: "/contact",
+  keywords: ["contact Birkert Technology", "start a software project"],
+});
 
 export default function ContactPage() {
   return (
@@ -69,7 +78,7 @@ export default function ContactPage() {
               href={action.href}
               variant={action.variant}
             >
-                {action.label}
+              {action.label}
             </Button>
           ))}
         </div>
