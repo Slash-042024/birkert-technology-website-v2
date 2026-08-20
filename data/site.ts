@@ -22,6 +22,12 @@ export const navItems: NavItem[] = [
   { label: "Contact", href: "/contact" },
 ];
 
+export const footerLinks: NavItem[] = [
+  ...navItems,
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
+];
+
 export const products: Product[] = [
   {
     slug: "towcontrol",

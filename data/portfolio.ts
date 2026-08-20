@@ -26,7 +26,7 @@ export const portfolioProjects: PortfolioProject[] = [
     label: "Kristian Taylor Photography",
     slug: "kristian-taylor-photography",
     href: "/portfolio/kristian-taylor-photography",
-    externalUrl: "https://kristiantaylorphotography.com",
+    externalUrl: "https://kristiantaylorphoto.com",
     tagline: "Brand-forward portfolio site for a photographer",
     description:
       "A custom website focused on gallery performance, visual storytelling, and conversion-oriented inquiry flow.",
@@ -42,7 +42,7 @@ export const portfolioProjects: PortfolioProject[] = [
 export function getPortfolioProjectBySlug(slug: string) {
   const normalizedSlug = slug.toLowerCase();
   const slugAliases: Record<string, string> = {
-    "kristian-taylor-photography": "kristian-taylor-photography",
+    "kristian-taylor-photo": "kristian-taylor-photo",
   };
   const resolvedSlug = slugAliases[normalizedSlug] ?? normalizedSlug;
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navItems, siteName } from "@/data/site";
+import { footerLinks, siteName } from "@/data/site";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -17,7 +17,7 @@ export function SiteFooter() {
 
         <nav aria-label="Footer navigation" className="lg:justify-self-end">
           <ul className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-3">
-            {navItems.map((item) => (
+            {footerLinks.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}

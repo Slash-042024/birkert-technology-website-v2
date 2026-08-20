@@ -2,7 +2,15 @@ import type { MetadataRoute } from "next";
 import { portfolioProjects } from "@/data/portfolio";
 import { siteUrl } from "@/data/seo";
 
-const staticRoutes = ["/", "/about", "/services", "/portfolio", "/contact"];
+const staticRoutes = [
+  "/",
+  "/about",
+  "/services",
+  "/portfolio",
+  "/contact",
+  "/privacy",
+  "/terms",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
